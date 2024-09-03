@@ -2,6 +2,14 @@ import "./App.css";
 import react from "react";
 import products from "./products";
 
+const productsList = products.map((product) => {
+  <div>
+    <img src={product.image} alt={product.name} />
+    <h2>{product.name}</h2>
+    <p>Price: {product.price}</p>
+  </div>;
+  return <div>{productsList}</div>;
+});
 function App() {
   return (
     <div>
@@ -11,13 +19,6 @@ function App() {
         alt="happy sweets logo"
       />
       <p>Made with Love...</p>
-      {products.map((product, index) => (
-        <div key={index}>
-          <h2>{product.name}</h2>
-          <img src={product.image} alt={product.name} />
-          <p>Price: {product.price}</p>
-        </div>
-      ))}
     </div>
   );
 }

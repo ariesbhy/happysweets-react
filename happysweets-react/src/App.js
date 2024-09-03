@@ -1,6 +1,8 @@
 import "./App.css";
 import react from "react";
 import products from "./products";
+import ProductItem from "./components/ProductItem";
+import happysweets from "./css/happysweets.css";
 
 const productsList = products.map((product) => {
   <div>
@@ -12,13 +14,8 @@ const productsList = products.map((product) => {
 });
 function App() {
   return (
-    <div>
-      <h1>Happy Sweets</h1>
-      <img
-        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQw_M3cLR1EDEcRloIkfTB1M5Pl11n6PbubUQ&s"
-        alt="happy sweets logo"
-      />
-      <p>Made with Love...</p>
+    <div className="sweets-container">
+      <ProductItem />
     </div>
   );
 }

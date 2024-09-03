@@ -1,4 +1,6 @@
 import "./App.css";
+import react from "react";
+import products from "./products";
 
 function App() {
   return (
@@ -9,6 +11,13 @@ function App() {
         alt="happy sweets logo"
       />
       <p>Made with Love...</p>
+      {products.map((product, index) => (
+        <div key={index}>
+          <h2>{product.name}</h2>
+          <img src={product.image} alt={product.name} />
+          <p>Price: {product.price}</p>
+        </div>
+      ))}
     </div>
   );
 }
